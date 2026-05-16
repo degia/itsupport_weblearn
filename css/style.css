@@ -96,6 +96,7 @@ body {
   z-index: 900;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   transition: all 0.3s ease;
 }
@@ -207,6 +208,7 @@ body {
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 60px 60px;
   opacity: 0.3;
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, transparent 70%);
   mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, transparent 70%);
 }
 
@@ -620,6 +622,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 .modal-overlay.open {
@@ -887,10 +890,10 @@ header p {
   font-size: 0.95rem;
 }
 
-.gridwebmore {
+.grid-more {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(1fr));
+  gap: 10px;
 }
 
 .card {
