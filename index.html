@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +8,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/mod.css" />
 </head>
+
 <body>
 
   <!-- NOISE OVERLAY -->
@@ -24,13 +29,322 @@
         <span class="logo-bracket">]</span>
       </div>
       <nav class="main-nav" id="main-nav">
+        <!-- TIER LINKS -->
         <a href="#tier0" class="nav-link" data-tier="0">T-0</a>
         <a href="#tier1" class="nav-link" data-tier="1">T-1</a>
         <a href="#tier2" class="nav-link" data-tier="2">T-2</a>
         <a href="#tier3" class="nav-link" data-tier="3">T-3</a>
         <a href="#tier4" class="nav-link" data-tier="4">T-4</a>
-        <a href="index.html" >Menu</a>
-        
+
+        <div class="nav-divider"></div>
+
+        <!-- MEGA MENU TRIGGER -->
+        <div class="mega-menu-wrapper" id="mega-menu-wrapper">
+          <button class="mega-trigger" id="mega-trigger" aria-expanded="false" aria-haspopup="true">
+            <span class="mega-trigger-label">Menu</span>
+            <span class="mega-trigger-icon">
+              <span class="mega-icon-bar"></span>
+              <span class="mega-icon-bar"></span>
+              <span class="mega-icon-bar"></span>
+            </span>
+          </button>
+
+          <!-- MEGA MENU PANEL -->
+          <div class="mega-panel" id="mega-panel" role="dialog" aria-label="Mega Menu">
+            <div class="mega-panel-inner">
+
+              <!-- HEADER MEGA -->
+              <div class="mega-panel-header">
+                <span class="mega-panel-title">// EXPLORE RESOURCES</span>
+                <button class="mega-close-btn" id="mega-close-btn" aria-label="Tutup menu">✕</button>
+              </div>
+
+              <!-- COLUMNS -->
+              <div class="mega-columns">
+
+                <!-- COL 1: Web Learn -->
+                <div class="mega-col">
+                  <div class="mega-col-header">
+                      <h3 class="mega-col-title">Web Learn</h3>
+                      <p class="mega-col-sub">Materi pembelajaran online</p>
+                  </div>
+                  <ul class="mega-links">
+                    <li><a href="#" class="mega-link" data-badge="Core">
+                        <span class="ml-text">
+                          <span class="ml-name">Networking</span>
+                          <span class="ml-desc">TCP/IP, OSI, Routing & Switching</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="Hot">
+                        <span class="ml-icon">🗄️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Data & Database</span>
+                          <span class="ml-desc">SQL, NoSQL, Data Engineering</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🎨</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Design & UI/UX</span>
+                          <span class="ml-desc">Figma, System Design, Prototyping</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🖥️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Server & Infra</span>
+                          <span class="ml-desc">Linux, Windows Server, Virtualization</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="New">
+                        <span class="ml-icon">⚙️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Dev Ops</span>
+                          <span class="ml-desc">Docker, K8s, CI/CD, Terraform</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="Hot">
+                        <span class="ml-icon">🛡️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Cyber Security</span>
+                          <span class="ml-desc">SOC, SIEM, Blue Team, Threat Intel</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">💀</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Ethical Hacking</span>
+                          <span class="ml-desc">Pen Testing, CTF, Red Team Tactics</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="New">
+                        <span class="ml-icon">☁️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Cloud Computing</span>
+                          <span class="ml-desc">AWS, Azure, GCP, Multi-cloud</span>
+                        </span>
+                      </a></li>
+                  </ul>
+                </div>
+
+                <!-- COL 2: Cheat Sheet -->
+                <div class="mega-col">
+                  <div class="mega-col-header">
+                    <span class="mega-col-icon">📋</span>
+                    <div>
+                      <h3 class="mega-col-title">Cheat Sheet</h3>
+                      <p class="mega-col-sub">Referensi cepat siap pakai</p>
+                    </div>
+                  </div>
+                  <ul class="mega-links">
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🌐</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Network Commands</span>
+                          <span class="ml-desc">ping, tracert, nmap, netstat, arp</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🗄️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">SQL Queries</span>
+                          <span class="ml-desc">SELECT, JOIN, INDEX, PROCEDURE</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🎨</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Design Shortcuts</span>
+                          <span class="ml-desc">Figma, CSS Grid, Flexbox reference</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🖥️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Server Admin</span>
+                          <span class="ml-desc">AD, DNS, DHCP, IIS, Apache</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="Pop">
+                        <span class="ml-icon">⚙️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Dev Ops Commands</span>
+                          <span class="ml-desc">kubectl, docker, terraform, git</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="Pop">
+                        <span class="ml-icon">🐧</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Linux CLI</span>
+                          <span class="ml-desc">bash, vim, grep, awk, sed, systemctl</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🪟</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Windows CMD/PS</span>
+                          <span class="ml-desc">PowerShell, cmd, reg, wmic, GPO</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="New">
+                        <span class="ml-icon">🔐</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Security Cheatsheet</span>
+                          <span class="ml-desc">Nmap flags, Metasploit, Hydra</span>
+                        </span>
+                      </a></li>
+                  </ul>
+                </div>
+
+                <!-- COL 3: Tools -->
+                <div class="mega-col">
+                  <div class="mega-col-header">
+                    <span class="mega-col-icon">🔧</span>
+                    <div>
+                      <h3 class="mega-col-title">Tools</h3>
+                      <p class="mega-col-sub">Panduan penggunaan tools IT</p>
+                    </div>
+                  </div>
+                  <ul class="mega-links">
+                    <li><a href="#" class="mega-link" data-badge="Pro">
+                        <span class="ml-icon">🦈</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Wireshark</span>
+                          <span class="ml-desc">Packet capture & network analysis</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="Pro">
+                        <span class="ml-icon">🗺️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Nmap</span>
+                          <span class="ml-desc">Port scanning & network discovery</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">📦</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Cisco Packet Tracer</span>
+                          <span class="ml-desc">Network simulation & lab practice</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🐘</span>
+                        <span class="ml-text">
+                          <span class="ml-name">XAMPP</span>
+                          <span class="ml-desc">Local web server & SQL environment</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🐬</span>
+                        <span class="ml-text">
+                          <span class="ml-name">MySQL Workbench</span>
+                          <span class="ml-desc">Visual database design & query</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="New">
+                        <span class="ml-icon">🔥</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Burp Suite</span>
+                          <span class="ml-desc">Web vulnerability scanner & proxy</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="New">
+                        <span class="ml-icon">🖥️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">VirtualBox / VMware</span>
+                          <span class="ml-desc">VM lab setup & OS sandboxing</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">📊</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Grafana + Prometheus</span>
+                          <span class="ml-desc">Monitoring, metrics & dashboards</span>
+                        </span>
+                      </a></li>
+                  </ul>
+                </div>
+
+                <!-- COL 4: Rekomendasi (bonus) -->
+                <div class="mega-col mega-col-bonus">
+                  <div class="mega-col-header">
+                    <span class="mega-col-icon">⭐</span>
+                    <div>
+                      <h3 class="mega-col-title">Rekomendasi</h3>
+                      <p class="mega-col-sub">Saran dari tim IT Academy</p>
+                    </div>
+                  </div>
+                  <ul class="mega-links">
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🏆</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Roadmap Karier IT</span>
+                          <span class="ml-desc">Jalur dari helpdesk ke architect</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="Hot">
+                        <span class="ml-icon">📜</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Sertifikasi Populer</span>
+                          <span class="ml-desc">CompTIA, Cisco, AWS, Microsoft</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🧪</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Lab Practice</span>
+                          <span class="ml-desc">Hands-on virtual lab scenarios</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link" data-badge="New">
+                        <span class="ml-icon">🤖</span>
+                        <span class="ml-text">
+                          <span class="ml-name">AI for IT Support</span>
+                          <span class="ml-desc">Gunakan AI untuk produktivitas kerja</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">📰</span>
+                        <span class="ml-text">
+                          <span class="ml-name">IT News & Blogs</span>
+                          <span class="ml-desc">Sumber berita teknologi terpercaya</span>
+                        </span>
+                      </a></li>
+                    <li><a href="#" class="mega-link">
+                        <span class="ml-icon">🎙️</span>
+                        <span class="ml-text">
+                          <span class="ml-name">Podcast IT</span>
+                          <span class="ml-desc">Security Now, Darknet Diaries, dll</span>
+                        </span>
+                      </a></li>
+                  </ul>
+
+                  <!-- QUICK SEARCH -->
+                  <div class="mega-search-box">
+                    <span class="mega-search-icon">⌕</span>
+                    <input type="text" class="mega-search-input" id="mega-search-input" placeholder="Cari materi..."
+                      autocomplete="off" />
+                  </div>
+                </div>
+
+              </div><!-- /mega-columns -->
+
+              <!-- BOTTOM BAR -->
+              <div class="mega-bottom-bar">
+                <div class="mega-bottom-links">
+                  <a href="#" class="mega-bottom-link">📚 Semua Materi</a>
+                  <a href="#" class="mega-bottom-link">🗺️ Roadmap</a>
+                  <a href="#" class="mega-bottom-link">💬 Komunitas</a>
+                  <a href="#" class="mega-bottom-link">📧 Newsletter</a>
+                </div>
+                <span class="mega-bottom-tag">// v2.0 — Updated 2025</span>
+              </div>
+
+            </div><!-- /mega-panel-inner -->
+          </div><!-- /mega-panel -->
+        </div><!-- /mega-menu-wrapper -->
+
+        <div class="nav-divider"></div>
         <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
           <span class="theme-icon-dark">◐</span>
           <span class="theme-icon-light">◑</span>
@@ -52,7 +366,8 @@
         <span class="title-line accent-line">IT SUPPORT</span>
         <span class="title-line">FROM ZERO</span>
       </h1>
-      <p class="hero-sub">Dari Self-Service hingga Engineering tingkat lanjut.<br>Pelajari semua tier secara terstruktur dan sistematis.</p>
+      <p class="hero-sub">Dari Self-Service hingga Engineering tingkat lanjut.<br>Pelajari semua tier secara terstruktur
+        dan sistematis.</p>
       <div class="hero-stats">
         <div class="stat-box">
           <span class="stat-num">5</span>
@@ -80,7 +395,8 @@
           <span class="t-title">terminal — support@academy</span>
         </div>
         <div class="terminal-body" id="terminal-body">
-          <p><span class="t-prompt">$</span> <span class="t-cmd" id="typewriter"></span><span class="cursor-blink">_</span></p>
+          <p><span class="t-prompt">$</span> <span class="t-cmd" id="typewriter"></span><span
+              class="cursor-blink">_</span></p>
           <div id="terminal-output"></div>
         </div>
       </div>
@@ -127,7 +443,8 @@
         <div class="tier-badge">TIER 0</div>
         <div class="tier-title-block">
           <h2 class="tier-title">Self-Service Support</h2>
-          <p class="tier-desc">Dukungan mandiri — pengguna menyelesaikan masalah sendiri menggunakan sumber daya yang tersedia.</p>
+          <p class="tier-desc">Dukungan mandiri — pengguna menyelesaikan masalah sendiri menggunakan sumber daya yang
+            tersedia.</p>
         </div>
         <div class="tier-meta">
           <span class="meta-tag">Entry Level</span>
@@ -143,7 +460,8 @@
         <div class="tier-badge">TIER 1</div>
         <div class="tier-title-block">
           <h2 class="tier-title">Help Desk / Front-Line Support</h2>
-          <p class="tier-desc">Lini pertama kontak langsung dengan pengguna. Menangani isu umum, reset password, dan troubleshooting dasar.</p>
+          <p class="tier-desc">Lini pertama kontak langsung dengan pengguna. Menangani isu umum, reset password, dan
+            troubleshooting dasar.</p>
         </div>
         <div class="tier-meta">
           <span class="meta-tag">First Response</span>
@@ -159,7 +477,8 @@
         <div class="tier-badge">TIER 2</div>
         <div class="tier-title-block">
           <h2 class="tier-title">Technical / Advanced Support</h2>
-          <p class="tier-desc">Spesialis teknis menangani isu kompleks yang melampaui kemampuan Tier 1. Memerlukan keahlian mendalam.</p>
+          <p class="tier-desc">Spesialis teknis menangani isu kompleks yang melampaui kemampuan Tier 1. Memerlukan
+            keahlian mendalam.</p>
         </div>
         <div class="tier-meta">
           <span class="meta-tag">Specialist</span>
@@ -175,7 +494,8 @@
         <div class="tier-badge">TIER 3</div>
         <div class="tier-title-block">
           <h2 class="tier-title">Expert / Subject Matter Expert</h2>
-          <p class="tier-desc">Para ahli internal atau vendor yang menangani bug kritis, arsitektur sistem, dan isu yang memerlukan R&D.</p>
+          <p class="tier-desc">Para ahli internal atau vendor yang menangani bug kritis, arsitektur sistem, dan isu yang
+            memerlukan R&D.</p>
         </div>
         <div class="tier-meta">
           <span class="meta-tag">SME</span>
@@ -191,7 +511,8 @@
         <div class="tier-badge">TIER 4</div>
         <div class="tier-title-block">
           <h2 class="tier-title">Vendor / Engineering Support</h2>
-          <p class="tier-desc">Eskalasi ke pihak eksternal: vendor, manufacturer, atau tim engineering khusus untuk isu yang tak dapat diselesaikan secara internal.</p>
+          <p class="tier-desc">Eskalasi ke pihak eksternal: vendor, manufacturer, atau tim engineering khusus untuk isu
+            yang tak dapat diselesaikan secara internal.</p>
         </div>
         <div class="tier-meta">
           <span class="meta-tag">External Vendor</span>
@@ -202,6 +523,18 @@
     </section>
 
   </main>
+
+  <!-- More Website Content... -->
+  <div class="containerwebmore">
+    <header>
+      <h1>🌐 Website Preview Gallery</h1>
+      <p>Koleksi website yang dapat dilihat langsung tanpa meninggalkan halaman ini.</p>
+    </header>
+  
+    <div class="grid-more" id="card-containerwebmore">
+      <!-- Cards akan di-render otomatis oleh JavaScript -->
+    </div>
+  </div>
 
   <!-- MODAL -->
   <div class="modal-overlay" id="modal-overlay">
@@ -216,18 +549,6 @@
     </div>
   </div>
 
-  <!-- More Website Content... -->
-  <div class="containerwebmore">
-    <header>
-      <h1>🌐 Website Preview Gallery</h1>
-      <p>Koleksi website yang dapat dilihat langsung tanpa meninggalkan halaman ini.</p>
-    </header>
-  
-    <div class="grid-more" id="card-containerwebmore">
-      <!-- Cards akan di-render otomatis oleh JavaScript -->
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
@@ -238,5 +559,7 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/contentweb.js"></script>
 </body>
+
 </html>

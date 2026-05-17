@@ -1428,100 +1428,110 @@ window.addEventListener('scroll', () => {
 // ======== INIT ========
 renderModules();
 
-// ======== WEB PAGE MORE ========
+// ======== MEGA MENU ========
+(function initMegaMenu() {
+  const trigger    = document.getElementById('mega-trigger');
+  const panel      = document.getElementById('mega-panel');
+  const closeBtn   = document.getElementById('mega-close-btn');
+  const searchInput = document.getElementById('mega-search-input');
 
-const webmore = {
-  example: {
-    title: "EDU TECH", 
-    url: "https://edute.netlify.app/",
-    description: "Website contoh resmi IANA untuk pengujian & demo.",
-    badge: "Demo",
-    category: "testing"
-  },
-  wiki: {
-    title: "Wikipedia Mobile",
-    url: "https://www.appart.agency/",
-    description: "Ensiklopedia bebas versi mobile (mendukung iframe).",
-    badge: "Live",
-    category: "reference"
-  },
-  mdn: {
-    title: "MDN Web Docs",
-    url: "https://davistalabs.netlify.app/",
-    description: "Dokumentasi web resmi & terpercaya oleh Mozilla.",
-    badge: "Live",
-    category: "development"
-  },
-  jsfiddle: {
-    title: "JSFiddle",
-    url: "https://jsfiddle.net/",
-    description: "Online playground untuk HTML, CSS & JavaScript.",
-    badge: "Tool",
-    category: "development"
-  },
-  hackernews: {
-      title: "Hacker News",
-      url: "https://motion.zajno.com/",
-      description: "Portal berita teknologi, startup & developer.",
-      badge: "Live",
-      category: "news"
-  },
-  magicjohns: {
-      title: "Hacker News",
-      url: "https://www.magicjohns.com/",
-      description: "Portal berita teknologi, startup & developer.",
-      badge: "Live",
-      category: "news"
+  if (!trigger || !panel) return;
+
+  // Inject backdrop
+  const backdrop = document.createElement('div');
+  backdrop.className = 'mega-backdrop';
+  backdrop.id = 'mega-backdrop';
+  document.body.appendChild(backdrop);
+
+  let isOpen = false;
+
+  function openMenu() {
+    isOpen = true;
+    panel.classList.add('open');
+    backdrop.classList.add('open');
+    trigger.classList.add('active');
+    trigger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => searchInput && searchInput.focus(), 300);
   }
-};
 
-// 🛠️ Fungsi Render Card
-function renderCards() {
-  const containerwebmore = document.getElementById('card-containerwebmore');
-  if (!containerwebmore) return;
-  containerwebmore.innerHTML = '';
-  Object.entries(webmore).forEach(([key, site]) => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    
-    card.innerHTML = `
-      <div class="card-header">
-          <h3>${site.title}</h3>
-          <span class="badge">${site.badge}</span>
-      </div>
-      <div class="iframe-box">
-          <iframe 
-              src="${site.url}" 
-              title="${site.title} Preview" 
-              loading="lazy"
-              sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-          ></iframe>
-          <div class="iframe-blocked" style="opacity: 0; transition: opacity 0.3s;">
-              ⚠️ Preview diblokir oleh website target.<br>
-              <a href="${site.url}" target="_blank" rel="noopener" style="margin-top:8px; color:#4f46e5;">Buka di tab baru →</a>
-          </div>
-      </div>
-      <div class="iframe-overlay">
-        
-      </div>
-      <div class="card-footer">
-        ${site.description}
-        <a href="${site.url}" target="_blank" rel="noopener" style="margin-top:8px; color:#4f46e5;">Visit →</a>
-      </div>
-      `;
-      // Deteksi jika iframe gagal/gagal memuat (fallback sederhana)
-      const iframe = card.querySelector('iframe');
-      const fallback = card.querySelector('.iframe-blocked');
-      
-      iframe.addEventListener('error', () => {
-          fallback.style.opacity = '1';
-      });
-      // Beberapa browser tidak trigger 'error' pada iframe cross-origin.
-      // Fallback ini bisa diaktifkan manual jika diperlukan.
-      containerwebmore.appendChild(card);
+  function closeMenu() {
+    isOpen = false;
+    panel.classList.remove('open');
+    backdrop.classList.remove('open');
+    trigger.classList.remove('active');
+    trigger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (searchInput) searchInput.value = '';
+    showAllLinks();
+  }
+
+  function toggleMenu() {
+    isOpen ? closeMenu() : openMenu();
+  }
+
+  trigger.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
+  backdrop.addEventListener('click', closeMenu);
+  closeBtn && closeBtn.addEventListener('click', closeMenu);
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen) closeMenu();
   });
-}
 
-// Jalankan saat DOM siap
-document.addEventListener('DOMContentLoaded', renderCards);
-    
+  // Close on tier nav link click
+  document.querySelectorAll('.nav-link[data-tier]').forEach(l => {
+    l.addEventListener('click', () => { if (isOpen) closeMenu(); });
+  });
+
+  // Mega link click → close menu (placeholder navigation)
+  panel.querySelectorAll('.mega-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (link.getAttribute('href') === '#') e.preventDefault();
+      closeMenu();
+    });
+  });
+
+  // Bottom bar links
+  panel.querySelectorAll('.mega-bottom-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (link.getAttribute('href') === '#') e.preventDefault();
+      closeMenu();
+    });
+  });
+
+  // ---- Quick Search / Filter ----
+  function showAllLinks() {
+    panel.querySelectorAll('.mega-link').forEach(l => {
+      l.style.display = '';
+    });
+    panel.querySelectorAll('.mega-col').forEach(col => {
+      col.style.display = '';
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      if (!q) { showAllLinks(); return; }
+
+      panel.querySelectorAll('.mega-link').forEach(link => {
+        const name = link.querySelector('.ml-name')?.textContent.toLowerCase() || '';
+        const desc = link.querySelector('.ml-desc')?.textContent.toLowerCase() || '';
+        const match = name.includes(q) || desc.includes(q);
+        link.style.display = match ? '' : 'none';
+      });
+
+      // Hide cols that have no visible links
+      panel.querySelectorAll('.mega-col').forEach(col => {
+        const links = col.querySelectorAll('.mega-link');
+        const hasVisible = Array.from(links).some(l => l.style.display !== 'none');
+        col.style.display = (links.length === 0 || hasVisible) ? '' : 'none';
+      });
+    });
+  }
+
+  // Close if clicking inside panel on non-interactive area doesn't bubble to backdrop
+  panel.addEventListener('click', (e) => e.stopPropagation());
+
+})();
