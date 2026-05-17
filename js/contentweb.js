@@ -1,26 +1,19 @@
 // ======== WEB PAGE MORE ========
 
 const webmore = {
-  example: {
+  network: {
     title: "EDU TECH", 
     url: "https://edute.netlify.app/",
-    description: "Website contoh resmi IANA untuk pengujian & demo.",
-    badge: "Demo",
-    category: "testing"
-  },
-  wiki: {
-    title: "Wikipedia Mobile",
-    url: "https://www.appart.agency/",
-    description: "Ensiklopedia bebas versi mobile (mendukung iframe).",
+    description: "Network learning website.",
     badge: "Live",
-    category: "reference"
+    category: "Network"
   },
-  mdn: {
-    title: "MDN Web Docs",
+  data: {
+    title: "Davista Labs",
     url: "https://davistalabs.netlify.app/",
-    description: "Dokumentasi web resmi & terpercaya oleh Mozilla.",
+    description: "Data learning website.",
     badge: "Live",
-    category: "development"
+    category: "Data"
   },
   jsfiddle: {
     title: "JSFiddle",
@@ -29,20 +22,6 @@ const webmore = {
     badge: "Tool",
     category: "development"
   },
-  hackernews: {
-      title: "Hacker News",
-      url: "https://motion.zajno.com/",
-      description: "Portal berita teknologi, startup & developer.",
-      badge: "Live",
-      category: "news"
-  },
-  magicjohns: {
-      title: "Hacker News",
-      url: "https://www.magicjohns.com/",
-      description: "Portal berita teknologi, startup & developer.",
-      badge: "Live",
-      category: "news"
-  }
 };
 
 // 🛠️ Fungsi Render Card

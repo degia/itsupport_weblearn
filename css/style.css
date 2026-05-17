@@ -919,16 +919,24 @@ body {
 }
 
 .footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
   font-family: var(--font-mono);
-  font-size: 1rem;
   font-weight: 700;
-  color: var(--text-3);
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
 }
 
 .footer-logo span {
   color: var(--text-2);
+}
+
+.footer-logo-img {
+  width: 10%;
+  margin-left: 0.3rem;
 }
 
 .footer-copy {
