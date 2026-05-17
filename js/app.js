@@ -2,53 +2,6 @@
    IT SUPPORT ACADEMY — app.js
    ======================================== */
 
-// ======== MODAL ========
-function openModal(tier, index) {
-  const mod = curriculum[tier][index];
-  const overlay = document.getElementById('modal-overlay');
-
-  document.getElementById('modal-tier-badge').textContent = `TIER ${tier}`;
-  document.getElementById('modal-title').textContent = mod.title;
-  document.getElementById('modal-category').textContent = `// ${mod.category}`;
-  document.getElementById('modal-body').innerHTML = mod.content;
-
-  const tagsEl = document.getElementById('modal-tags');
-  tagsEl.innerHTML = mod.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
-
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('modal-close').addEventListener('click', closeModal);
-document.getElementById('modal-overlay').addEventListener('click', (e) => {
-  if (e.target === e.currentTarget) closeModal();
-});
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-
-// ======== THEME TOGGLE ========
-const themeToggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
-
-function setTheme(theme) {
-  html.setAttribute('data-theme', theme);
-  localStorage.setItem('itsupport-theme', theme);
-}
-
-themeToggle.addEventListener('click', () => {
-  const current = html.getAttribute('data-theme');
-  setTheme(current === 'dark' ? 'light' : 'dark');
-});
-
-const savedTheme = localStorage.getItem('itsupport-theme');
-if (savedTheme) setTheme(savedTheme);
-
-
-
 // ======== TERMINAL TYPEWRITER ========
 const commands = [
   { cmd: "itsa --list-tiers", output: ["Found 5 tiers: T0, T1, T2, T3, T4", "Total modules: 30", "Status: Ready to learn →"] },
@@ -104,25 +57,3 @@ function clearAndNext() {
 }
 
 setTimeout(typeChar, 1000);
-
-// ======== SMOOTH SCROLL TIER NODES ========
-document.querySelectorAll('.tier-node').forEach(node => {
-  node.addEventListener('click', () => {
-    const tier = node.getAttribute('data-tier');
-    const section = document.getElementById(`tier${tier}`);
-    if (section) section.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-// ======== HEADER SHADOW ON SCROLL ========
-window.addEventListener('scroll', () => {
-  const header = document.getElementById('site-header');
-  if (window.scrollY > 20) {
-    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.2)';
-  } else {
-    header.style.boxShadow = 'none';
-  }
-});
-
-// ======== INIT ========
-renderModules();

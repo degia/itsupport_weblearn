@@ -2,7 +2,7 @@
 const curriculum = {
   0: [
     {
-      icon: "🔍",
+      icon: "",
       title: "FAQ & Knowledge Base",
       category: "Self-Service Resources",
       preview: "Mengenal artikel FAQ, panduan pengguna, dan portal self-service yang memungkinkan pengguna menyelesaikan masalah umum secara mandiri.",
@@ -36,7 +36,7 @@ const curriculum = {
       `
     },
     {
-      icon: "🤖",
+      icon: "",
       title: "Chatbot & Virtual Agent",
       category: "Automated Support",
       preview: "Implementasi chatbot AI dan virtual agent untuk menangani pertanyaan umum, reset password, dan troubleshooting dasar secara otomatis.",
@@ -68,7 +68,7 @@ const curriculum = {
       `
     },
     {
-      icon: "📚",
+      icon: "",
       title: "Password Reset Mandiri",
       category: "Identity Management",
       preview: "Proses self-service password reset menggunakan SSPR (Self-Service Password Reset) tools seperti Azure AD SSPR dan sistem OTP.",
@@ -104,7 +104,7 @@ Konfirmasi Email → Akses Kembali</pre>
       `
     },
     {
-      icon: "📋",
+      icon: "",
       title: "Service Catalog & Request Portal",
       category: "Request Management",
       preview: "Mengelola service catalog IT: daftar layanan yang tersedia beserta SLA, prosedur request, dan form pengajuan layanan standar.",
@@ -137,7 +137,7 @@ Konfirmasi Email → Akses Kembali</pre>
       `
     },
     {
-      icon: "🎓",
+      icon: "",
       title: "User Training & Onboarding",
       category: "Education",
       preview: "Program pelatihan pengguna baru, onboarding IT, dan program literasi digital untuk meningkatkan kemampuan mandiri pengguna.",
@@ -170,7 +170,7 @@ Konfirmasi Email → Akses Kembali</pre>
       `
     },
     {
-      icon: "📊",
+      icon: "",
       title: "Status Page & Monitoring Dashboard",
       category: "Transparency",
       preview: "Membangun halaman status layanan publik yang memberikan transparansi kepada pengguna tentang kondisi sistem dan jadwal maintenance.",
@@ -205,7 +205,7 @@ Konfirmasi Email → Akses Kembali</pre>
 
   1: [
     {
-      icon: "🎧",
+      icon: "",
       title: "Help Desk Fundamentals",
       category: "Front-Line Support",
       preview: "Dasar-dasar operasional Help Desk: cara menerima tiket, prioritisasi, SLA management, dan komunikasi efektif dengan pengguna.",
@@ -238,7 +238,7 @@ Konfirmasi Email → Akses Kembali</pre>
       `
     },
     {
-      icon: "🖥️",
+      icon: "",
       title: "Desktop & Endpoint Troubleshooting",
       category: "Hardware & Software",
       preview: "Panduan troubleshooting komputer Windows dan macOS: boot issues, BSOD, software crashes, peripheral problems, dan performance tuning.",
@@ -278,7 +278,7 @@ Konfirmasi Email → Akses Kembali</pre>
       `
     },
     {
-      icon: "🌐",
+      icon: "",
       title: "Network Connectivity Basics",
       category: "Networking",
       preview: "Dasar troubleshooting koneksi jaringan: ping, traceroute, DNS issues, IP configuration, VPN, dan WiFi problems.",
@@ -318,7 +318,7 @@ L7 Application — DNS resolve? Auth credentials?</pre>
       `
     },
     {
-      icon: "📧",
+      icon: "",
       title: "Email & Collaboration Tools",
       category: "Communication Tools",
       preview: "Support untuk Microsoft 365, Outlook, Teams, SharePoint, Google Workspace: konfigurasi, sinkronisasi, dan troubleshooting umum.",
@@ -358,7 +358,7 @@ L7 Application — DNS resolve? Auth credentials?</pre>
       `
     },
     {
-      icon: "🔐",
+      icon: "",
       title: "Account & Access Management",
       category: "Identity & Access",
       preview: "Manajemen akun pengguna di Active Directory, Azure AD, dan sistem IAM: create, modify, disable, unlock, dan permission management dasar.",
@@ -402,7 +402,7 @@ Set-ADAccountPassword -Identity "username"
       `
     },
     {
-      icon: "🖨️",
+      icon: "",
       title: "Printer & Peripheral Support",
       category: "Hardware Support",
       preview: "Troubleshooting printer, scanner, dan peripheral: driver issues, network printing, toner/paper jam, dan konfigurasi print server.",
@@ -442,7 +442,7 @@ net start spooler</pre>
 
   2: [
     {
-      icon: "🔧",
+      icon: "",
       title: "Advanced System Administration",
       category: "System Administration",
       preview: "Administrasi server Windows dan Linux tingkat lanjut: Group Policy, DNS/DHCP management, server roles, performance tuning.",
@@ -484,7 +484,7 @@ gpresult /H C:\gpresult.html</pre>
       `
     },
     {
-      icon: "🔒",
+      icon: "",
       title: "Network Security & Firewall",
       category: "Security",
       preview: "Konfigurasi firewall, analisis network traffic, IDS/IPS management, VPN advanced, dan network segmentation.",
@@ -524,7 +524,7 @@ gpresult /H C:\gpresult.html</pre>
       `
     },
     {
-      icon: "☁️",
+      icon: "",
       title: "Cloud Platform Support (AWS/Azure/GCP)",
       category: "Cloud Computing",
       preview: "Support teknis untuk platform cloud: VM management, storage, identity, monitoring, cost optimization, dan troubleshooting cloud resources.",
@@ -565,7 +565,7 @@ gpresult /H C:\gpresult.html</pre>
       `
     },
     {
-      icon: "🗄️",
+      icon: "",
       title: "Database Administration Basics",
       category: "Database",
       preview: "Administrasi database SQL dan NoSQL: backup/restore, performance tuning, user management, query optimization, dan monitoring.",
@@ -605,7 +605,7 @@ ORDER BY avg_time DESC;</pre>
       `
     },
     {
-      icon: "📱",
+      icon: "",
       title: "Mobile Device Management (MDM)",
       category: "Endpoint Management",
       preview: "Implementasi dan manajemen MDM: Microsoft Intune, Jamf, enrollment, policy deployment, compliance, dan remote wipe.",
@@ -644,7 +644,7 @@ ORDER BY avg_time DESC;</pre>
       `
     },
     {
-      icon: "🛡️",
+      icon: "",
       title: "Cybersecurity Incident Response",
       category: "Security Operations",
       preview: "Dasar-dasar incident response: identifikasi, containment, eradication, recovery. Analisis malware, phishing, dan data breach handling.",
@@ -690,7 +690,7 @@ ORDER BY avg_time DESC;</pre>
 
   3: [
     {
-      icon: "🏗️",
+      icon: "",
       title: "Enterprise Architecture & Design",
       category: "Architecture",
       preview: "Merancang arsitektur IT enterprise: high availability, disaster recovery, capacity planning, dan technology roadmap alignment.",
@@ -731,7 +731,7 @@ ORDER BY avg_time DESC;</pre>
       `
     },
     {
-      icon: "🔬",
+      icon: "",
       title: "Root Cause Analysis & Problem Management",
       category: "ITIL Problem Management",
       preview: "Metodologi RCA: 5 Whys, Fishbone Diagram, Fault Tree Analysis. Problem management process dan permanent fix implementation.",
@@ -781,7 +781,7 @@ Root Cause: Tidak ada standar prosedur testing sebelum deployment.</pre>
       `
     },
     {
-      icon: "⚙️",
+      icon: "",
       title: "DevOps & Infrastructure as Code",
       category: "DevOps",
       preview: "Implementasi IaC dengan Terraform/Ansible, CI/CD pipelines, containerization dengan Docker & Kubernetes, dan GitOps practices.",
@@ -824,7 +824,7 @@ terraform destroy  # Destroy managed resources
       `
     },
     {
-      icon: "📡",
+      icon: "",
       title: "Advanced Networking & SDN",
       category: "Network Engineering",
       preview: "BGP routing, MPLS, SD-WAN, Software Defined Networking, network automation dengan Python/Netmiko, dan network observability.",
@@ -871,7 +871,7 @@ with ConnectHandler(**router) as net_connect:
       `
     },
     {
-      icon: "🔐",
+      icon: "",
       title: "Zero Trust Security Architecture",
       category: "Security Architecture",
       preview: "Implementasi Zero Trust: identity-centric security, micro-segmentation, SASE, PAM, dan security posture management.",
@@ -910,7 +910,7 @@ with ConnectHandler(**router) as net_connect:
       `
     },
     {
-      icon: "📈",
+      icon: "",
       title: "ITSM & Service Excellence",
       category: "Service Management",
       preview: "ITIL 4 framework: service value chain, continual improvement, metrics & KPIs, OKRs untuk IT, dan membangun budaya service excellence.",
@@ -957,7 +957,7 @@ KR3: 100% completion on DR drills</pre>
 
   4: [
     {
-      icon: "🏭",
+      icon: "",
       title: "Vendor Management & Escalation",
       category: "Vendor Relations",
       preview: "Proses eskalasi ke vendor eksternal, pengelolaan SLA kontrak, komunikasi eskalasi yang efektif, dan vendor relationship management.",
@@ -1001,7 +1001,7 @@ KR3: 100% completion on DR drills</pre>
       `
     },
     {
-      icon: "🔩",
+      icon: "",
       title: "Hardware Engineering & Data Center",
       category: "Infrastructure Engineering",
       preview: "Manajemen data center enterprise: rack design, power & cooling, server hardware deep-dive, SAN storage, dan hardware lifecycle.",
@@ -1042,7 +1042,7 @@ KR3: 100% completion on DR drills</pre>
       `
     },
     {
-      icon: "🧬",
+      icon: "",
       title: "Software Engineering & Custom Development",
       category: "Software Engineering",
       preview: "Tier 4 custom software development: API integration, internal tooling, automation scripting, dan kolaborasi dengan vendor development teams.",
@@ -1099,7 +1099,7 @@ for server in servers:
       `
     },
     {
-      icon: "🌍",
+      icon: "",
       title: "Global IT Operations & ITIL Governance",
       category: "IT Governance",
       preview: "Mengelola operasional IT global: follow-the-sun support model, ITIL governance framework, audit & compliance, dan IT strategic planning.",
@@ -1141,7 +1141,7 @@ for server in servers:
       `
     },
     {
-      icon: "🤝",
+      icon: "",
       title: "OEM & Manufacturer Support Engagement",
       category: "OEM Relations",
       preview: "Bekerja dengan OEM support: Cisco TAC, Microsoft Premier, HP Care Pack, Dell ProSupport — proses, tips, dan memaksimalkan support contracts.",
@@ -1187,7 +1187,7 @@ S4 = General query, response 2 hari</pre>
       `
     },
     {
-      icon: "🚀",
+      icon: "",
       title: "Emerging Technologies & Innovation",
       category: "Innovation",
       preview: "AI/ML di IT Operations (AIOps), edge computing, quantum-safe cryptography, 5G enterprise, dan mempersiapkan infrastruktur untuk masa depan.",
@@ -1229,8 +1229,6 @@ S4 = General query, response 2 hari</pre>
   ]
 };
 
-
-
 // ======== RENDER MODULES ========
 function renderModules() {
   Object.entries(curriculum).forEach(([tier, modules]) => {
@@ -1257,3 +1255,55 @@ function renderModules() {
     });
   });
 }
+
+
+// ======== MODAL ========
+function openModal(tier, index) {
+  const mod = curriculum[tier][index];
+  const overlay = document.getElementById('modal-overlay');
+
+  document.getElementById('modal-tier-badge').textContent = `TIER ${tier}`;
+  document.getElementById('modal-title').textContent = mod.title;
+  document.getElementById('modal-category').textContent = `// ${mod.category}`;
+  document.getElementById('modal-body').innerHTML = mod.content;
+
+  const tagsEl = document.getElementById('modal-tags');
+  tagsEl.innerHTML = mod.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+
+// ======== SMOOTH SCROLL TIER NODES ========
+document.querySelectorAll('.tier-node').forEach(node => {
+  node.addEventListener('click', () => {
+    const tier = node.getAttribute('data-tier');
+    const section = document.getElementById(`tier${tier}`);
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// ======== HEADER SHADOW ON SCROLL ========
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('site-header');
+  if (window.scrollY > 20) {
+    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.2)';
+  } else {
+    header.style.boxShadow = 'none';
+  }
+});
+
+// ======== INIT ========
+renderModules();

@@ -1256,19 +1256,22 @@ body {
 
 /* --- Column Header --- */
 .mega-col-header {
-  display: flex;
+  display: block;
   align-items: center;
   gap: 0.75rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border);
 }
 
-.mega-col-icon {
-  font-size: 1.3rem;
-  line-height: 1;
+.mega-header-t{
+font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--text-3);
 }
 
 .mega-col-title {
+  align-items: center;
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 700;
@@ -1380,6 +1383,7 @@ body {
 
 .ml-text {
   display: flex;
+  align-items: start;
   flex-direction: column;
   gap: 0.15rem;
   flex: 1;

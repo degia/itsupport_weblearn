@@ -44,6 +44,23 @@ const scrollObserver = new IntersectionObserver((entries) => {
 
 tierSections.forEach(s => scrollObserver.observe(s));
 
+// ======== THEME TOGGLE ========
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  localStorage.setItem('itsupport-theme', theme);
+}
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+const savedTheme = localStorage.getItem('itsupport-theme');
+if (savedTheme) setTheme(savedTheme);
+
 // ======== MEGA MENU ========
 (function initMegaMenu() {
   const trigger    = document.getElementById('mega-trigger');
